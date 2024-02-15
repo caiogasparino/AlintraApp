@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg viewBox="55.255 24.347 9.330 9.331" width="9.415" height="9.331"
+    xmlns="http://www.w3.org/2000/svg">
+    <defs>
+        <linearGradient id="logo_svg__b" x1="7.347" x2="26.954" y1="36.083" y2="15.886"
+            gradientUnits="userSpaceOnUse"
+            gradientTransform="matrix(0.338566, 0, 0, 0.327961, 55.254954, 20.899822)">
+            <stop stop-color="#D23A86" />
+            <stop offset="0.184" stop-color="#D43F7D" />
+            <stop offset="0.484" stop-color="#DA4C65" />
+            <stop offset="0.861" stop-color="#E4613D" />
+            <stop offset="1" stop-color="#E86A2D" />
+        </linearGradient>
+    </defs>
+    <path fill="url(#logo_svg__b)" fill-rule="evenodd"
+        d="M 59.963 24.347 C 61.018 24.347 62 24.692 62.782 25.283 L 62.782 24.347 L 64.67 24.347 L 64.67 33.678 L 62.782 33.678 L 62.782 29.013 C 62.782 27.474 61.515 26.218 59.963 26.218 C 58.41 26.218 57.143 27.474 57.143 29.012 C 57.143 30.551 58.41 31.807 59.963 31.807 L 62.782 31.807 C 62.298 32.939 61.193 33.666 59.963 33.678 C 57.367 33.678 55.255 31.586 55.255 29.012 C 55.255 26.44 57.367 24.347 59.963 24.347 Z"
+        clip-rule="evenodd" style=""
+        transform="matrix(0.9999999999999999, 0, 0, 0.9999999999999999, -8.881784197001252e-16, -8.881784197001252e-16)" />
+</svg>
