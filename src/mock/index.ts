@@ -1,4 +1,4 @@
-export type News = {
+export type NewsType = {
   id?: number;
   type?: string;
   title?: string;
@@ -13,7 +13,7 @@ export type News = {
   link?: string;
 };
 
-export type Data = Array<News>;
+export type Data = Array<NewsType>;
 
 export const data: Data = [
   {

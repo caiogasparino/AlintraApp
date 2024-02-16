@@ -1,14 +1,14 @@
 import React from 'react';
 import {Box, Heading, Text, VStack, Spacer, HStack, Center} from 'native-base';
 import {palette} from '~/utils/colors';
-import {News} from '~/mock';
+import {NewsType} from '~/mock';
 
 export const NewsCard = ({
   type,
   title,
   introduction,
   publication_date,
-}: News) => {
+}: NewsType) => {
   return (
     <Center w="100%">
       <VStack

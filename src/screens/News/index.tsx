@@ -1,14 +1,31 @@
 import {Center, FlatList, Skeleton, Spacer, Text, VStack} from 'native-base';
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 import {StatusBar} from 'react-native';
 import {NewsCard} from '~/components';
 import {palette} from '~/utils/colors';
 import {Container} from './styles';
-import {data} from '~/mock';
+import {fetchNews} from '~/services';
+import {NewsType} from '~/mock';
 
 export const News = () => {
+  const [newsData, setNewsData] = useState([] as NewsType[]);
+  const [loading, setLoading] = useState(true);
   const [renderedItems, setRenderedItems] = useState(5);
   const [loadingMore, setLoadingMore] = useState(false);
+
+  useEffect(() => {
+    const loadNews = async () => {
+      try {
+        const response: NewsType[] = await fetchNews();
+        setNewsData(response);
+        setLoading(false);
+      } catch (error: any) {
+        console.error('Error fetching news:', error.message);
+      }
+    };
+
+    loadNews();
+  }, []);
 
   const separator = () => {
     return <Spacer height={5} />;
@@ -48,9 +65,11 @@ export const News = () => {
       <Text bold fontSize={40} color={palette.white}>
         News
       </Text>
-      {!loadingMore && (
+      {loading ? (
+        skeleton()
+      ) : (
         <FlatList
-          data={data.slice(0, renderedItems)}
+          data={newsData.slice(0, renderedItems)}
           renderItem={({item}) => <NewsCard {...item} key={item.id} />}
           keyExtractor={(item, index) => index.toString()}
           showsVerticalScrollIndicator={false}
