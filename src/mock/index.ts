@@ -2,6 +2,7 @@ export type NewsType = {
   id?: number;
   type?: string;
   title?: string;
+  dataSocket?: any;
   introduction?: string;
   publication_date?: string;
   product_id?: number;

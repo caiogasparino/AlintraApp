@@ -6,8 +6,11 @@ import {palette} from '~/utils/colors';
 import {Container} from './styles';
 import {fetchNews} from '~/services';
 import {NewsType} from '~/mock';
+import useSocket from '~/hooks/useSocket';
 
 export const News = () => {
+  const {messages} = useSocket();
+  console.log('🚀 ~ News ~ messages:', messages);
   const [newsData, setNewsData] = useState([] as NewsType[]);
   const [loading, setLoading] = useState(true);
   const [renderedItems, setRenderedItems] = useState(5);
@@ -65,12 +68,15 @@ export const News = () => {
       <Text bold fontSize={40} color={palette.white}>
         News
       </Text>
+
       {loading ? (
         skeleton()
       ) : (
         <FlatList
           data={newsData.slice(0, renderedItems)}
-          renderItem={({item}) => <NewsCard {...item} key={item.id} />}
+          renderItem={({item}) => (
+            <NewsCard {...item} key={item.id} dataSocket={messages} />
+          )}
           keyExtractor={(item, index) => index.toString()}
           showsVerticalScrollIndicator={false}
           ItemSeparatorComponent={separator}

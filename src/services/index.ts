@@ -1,4 +1,5 @@
-const BASE_URL = 'http://localhost:3000';
+export const BASE_URL_WEBSOCKET = 'http://localhost:3001';
+export const BASE_URL = 'http://localhost:3000';
 
 export const fetchNews = async () => {
   try {
