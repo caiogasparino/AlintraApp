@@ -11,8 +11,8 @@ export const NewsCard = ({
   publication_date,
 }: NewsType) => {
   const regex = /�(.*?)�/g;
-  const matches = dataSocket?.match(regex) || [];
-  const textoExtraido = matches?.[0]?.replace(/�/g, '');
+  const matches = dataSocket.toString()?.match(regex) || 'Atualizando ...';
+  const news = matches?.[0]?.replace(/�/g, '');
 
   return (
     <Center w="100%">
@@ -45,7 +45,7 @@ export const NewsCard = ({
                 Ultimas atualizações
               </Text>
               <Text fontSize="xs" color="coolGray.200" alignSelf="flex-start">
-                {textoExtraido}
+                {news}
               </Text>
             </VStack>
             <Spacer />
