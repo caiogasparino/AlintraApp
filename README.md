@@ -3,6 +3,10 @@
 ![Screenshot 2024-02-16 at 21 09 10](https://github.com/caiogasparino/AlintraApp/assets/42823693/7938e963-4834-4d86-9d3d-3701043b72d9)
 ![Screenshot 2024-02-16 at 21 09 43](https://github.com/caiogasparino/AlintraApp/assets/42823693/451195f5-7864-4be2-bcf9-81f4be3ab418)
 ![Screenshot 2024-02-16 at 21 10 05](https://github.com/caiogasparino/AlintraApp/assets/42823693/e9363e2b-46c1-4f11-8dd2-0cfd102e33ed)
+![Screenshot 2024-03-20 at 21 58 34](https://github.com/caiogasparino/AlintraApp/assets/42823693/d709ccb8-4a57-471c-a372-5b06eb7c24bf)
+![Screenshot 2024-03-20 at 21 58 45](https://github.com/caiogasparino/AlintraApp/assets/42823693/a95ada00-2501-4755-aedd-7270ddb28713)
+![Screenshot 2024-03-20 at 21 58 57](https://github.com/caiogasparino/AlintraApp/assets/42823693/0ab25ccc-92f3-44f4-8012-066b48f9a63c)
+
 
 -----------------------
 
