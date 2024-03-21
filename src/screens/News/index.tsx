@@ -1,16 +1,15 @@
 import {Center, FlatList, Skeleton, Spacer, Text, VStack} from 'native-base';
-import React, {useState, useEffect} from 'react';
+import React, {useEffect, useState} from 'react';
 import {StatusBar} from 'react-native';
 import {NewsCard} from '~/components';
+import useSocket from '~/hooks/useSocket';
+import {NewsType} from '~/mock';
+import {fetchNews} from '~/services';
 import {palette} from '~/utils/colors';
 import {Container} from './styles';
-import {fetchNews} from '~/services';
-import {NewsType} from '~/mock';
-import useSocket from '~/hooks/useSocket';
 
 export const News = () => {
   const {messages} = useSocket();
-  console.log('🚀 ~ News ~ messages:', messages);
   const [newsData, setNewsData] = useState([] as NewsType[]);
   const [loading, setLoading] = useState(true);
   const [renderedItems, setRenderedItems] = useState(5);

@@ -1,7 +1,7 @@
-import React from 'react';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
+import React from 'react';
 
-import {User, Notifications, Search, Alintra, News} from '~/screens';
+import {Alintra, HomeScreen, Notifications, Search, User} from '~/screens';
 
 import {ParamListBase, RouteProp, useRoute} from '@react-navigation/native';
 import {TabBar} from '~/components/TabBar';
@@ -23,7 +23,7 @@ export const BottomTabMenu = () => {
       }}
       // eslint-disable-next-line react/no-unstable-nested-components
       tabBar={props => <TabBar {...props} />}>
-      <Tab.Screen name="News" component={News} />
+      <Tab.Screen name="Home" component={HomeScreen} />
       <Tab.Screen name="Alintra" component={Alintra} />
       <Tab.Screen name="User" component={User} />
       <Tab.Screen name="Notifications" component={Notifications} />
